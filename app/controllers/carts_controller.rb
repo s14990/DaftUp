@@ -2,7 +2,7 @@
 
 class CartsController < ApplicationController
   def show
-    render json: cart, include: '**' #includes all nested serialzers
+    render json: cart, include: '**' # includes all nested serialzers
   end
 
   private

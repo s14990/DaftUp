@@ -20,5 +20,4 @@ class Discount < ApplicationRecord
   def is_extra?
     kind == 'extra'
   end
-
 end

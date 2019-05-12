@@ -3,7 +3,7 @@
 class TotalSerializer < ActiveModel::Serializer
   attributes :sets, :extras, :regular_products, :regular_price, :total_price, :savings
 
-  #Added total price and regular price so we can be proud of how much we saved ':)
+  # Added total price and regular price so we can be proud of how much we saved ':)
 
   def sets
     my_sets = []
@@ -30,8 +30,7 @@ class TotalSerializer < ActiveModel::Serializer
   end
 
   def savings
-    saving=object.regular_price-object.total_price
+    saving = object.regular_price - object.total_price
     saving.round(2)
   end
-
 end

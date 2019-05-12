@@ -2,7 +2,6 @@
 
 module Carts
   class TotalsController < ApplicationController
-
     after_action :clear_totals, only: [:show]
 
     def show
@@ -19,10 +18,9 @@ module Carts
       TotalCreator.call(cart: cart)
     end
 
-    #after report total is cleared and all dependent bundles are destroyed
+    # after report total is cleared and all dependent bundles are destroyed
     def clear_totals
       Total.destroy_all
     end
-
   end
 end

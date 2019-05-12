@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Item, type: :model do
-  subject(:cart) {Cart.create}
+  subject(:cart) { Cart.create }
   subject(:product) { create(:product) }
-  subject(:item) {Item.create(cart: cart, product: product)}
+  subject(:item) { Item.create(cart: cart, product: product) }
 
   context(' valid data ') do
     it 'should be valid' do
@@ -17,7 +19,7 @@ RSpec.describe Item, type: :model do
 
   context('invalid data ') do
     it 'should be valid' do
-      item.cart=nil
+      item.cart = nil
       expect(item).to be_invalid
     end
   end
