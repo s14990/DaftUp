@@ -1,0 +1,6 @@
+AllCops:
+  Exclude:
+    - 'db/seeds.rb'
+    - 'app/models/product.rb'
+
+#Probably should have looked in rubocop docs before running autocorrect not after :()
